@@ -7,55 +7,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f9;
-      color: #333;
-    }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.6; background-color: #f4f4f9; color: #333; }
 
     /* Cabeçalho */
     header {
-      background: #004aad;
+      background: rgba(0,74,173,0.9);
       color: #fff;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
+      top: 0; width: 100%; z-index: 1000;
     }
-
     header h1 { font-size: 24px; }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 500; }
     nav a:hover { color: #ffd700; }
 
     /* Seções */
-    section {
-      min-height: 100vh;
-      padding: 120px 40px 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-
+    section { min-height: 100vh; padding: 120px 40px 80px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
     #home {
-      background: linear-gradient(to right, #004aad, #0077ff);
+      background: url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg") no-repeat center center/cover;
       color: #fff;
+      position: relative;
     }
+    #home::before {
+      content: ""; position: absolute; inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    #home > * { position: relative; z-index: 1; }
 
     #services { background: #f9f9f9; }
     #about { background: #fff; }
@@ -65,18 +46,18 @@
     .services-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
+      gap: 20px; margin-top: 20px;
     }
-
     .service-card {
       background: #fff;
-      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
+      overflow: hidden;
     }
-
+    .service-card img { width: 100%; height: 180px; object-fit: cover; }
+    .service-card h3 { margin: 15px 0 10px; }
+    .service-card p { padding: 0 15px 20px; }
     .service-card:hover { transform: translateY(-5px); }
 
     /* Botões */
@@ -86,41 +67,25 @@
       border-radius: 6px;
       cursor: pointer;
       background: #004aad;
-      color: #fff;
-      font-weight: bold;
+      color: #fff; font-weight: bold;
       transition: background 0.3s;
-      display: inline-block;
-      margin-top: 15px;
+      margin-top: 15px; display: inline-block;
     }
-
     button:hover, .btn:hover { background: #0077ff; }
 
     /* Formulário */
     form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 400px;
-      margin: auto;
+      display: flex; flex-direction: column; gap: 15px;
+      max-width: 400px; margin: auto;
     }
-
     input, textarea {
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-      width: 100%;
+      padding: 10px; border-radius: 6px; border: 1px solid #ccc;
+      font-size: 16px; width: 100%;
     }
-
     textarea { resize: none; height: 100px; }
 
     /* Rodapé */
-    footer {
-      background: #004aad;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-    }
+    footer { background: #004aad; color: #fff; text-align: center; padding: 15px; }
   </style>
 </head>
 <body>
@@ -147,14 +112,17 @@
     <h2>Nossos Serviços</h2>
     <div class="services-container">
       <div class="service-card">
+        <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Planejamento Financeiro">
         <h3>📊 Planejamento Financeiro</h3>
         <p>Organize seus gastos e investimentos para conquistar um futuro tranquilo.</p>
       </div>
       <div class="service-card">
+        <img src="https://images.pexels.com/photos/4968631/pexels-photo-4968631.jpeg" alt="Renegociação de Dívidas">
         <h3>💳 Renegociação de Dívidas</h3>
         <p>Ajudamos você a negociar suas dívidas e retomar o controle da sua vida financeira.</p>
       </div>
       <div class="service-card">
+        <img src="https://images.pexels.com/photos/3182755/pexels-photo-3182755.jpeg" alt="Consultoria Pessoal">
         <h3>🤝 Consultoria Pessoal</h3>
         <p>Atendimento individual para alcançar seus objetivos financeiros de forma segura.</p>
       </div>
@@ -168,6 +136,7 @@
       A <strong>FinanAssist</strong> nasceu com o propósito de ajudar pessoas a conquistar estabilidade financeira.
       Nossa equipe conta com especialistas prontos para oferecer soluções personalizadas, sempre com ética e transparência.
     </p>
+    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg" alt="Equipe FinanAssist" style="margin-top:20px; max-width:600px; width:100%; border-radius:10px;">
   </section>
 
   <!-- Contato -->
@@ -201,7 +170,6 @@
     // Validação do formulário
     const form = document.getElementById("contactForm");
     const message = document.getElementById("formMessage");
-
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       message.textContent = "Mensagem enviada com sucesso! Entraremos em contato em breve.";
