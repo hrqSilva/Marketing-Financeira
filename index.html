@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assistência Financeira</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (ícones) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS (animações ao rolar) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Header / Menu -->
-  <header>
+  <header id="header">
     <nav class="navbar">
       <h1 class="logo">FinanAssist</h1>
       <ul class="nav-links">
@@ -23,26 +32,29 @@
 
   <!-- Seção Home -->
   <section id="home" class="hero">
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-up">
       <h2>Sua tranquilidade financeira começa aqui</h2>
       <p>Consultoria simples e prática para organizar suas finanças.</p>
-      <a href="#contact" class="btn">Fale Conosco</a>
+      <a href="#contact" class="btn"><i class="fa-solid fa-comments"></i> Fale Conosco</a>
     </div>
   </section>
 
   <!-- Seção Serviços -->
   <section id="services">
-    <h2>Nossos Serviços</h2>
+    <h2 data-aos="fade-up">Nossos Serviços</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" data-aos="zoom-in">
+        <i class="fa-solid fa-chart-line fa-2x"></i>
         <h3>Planejamento Financeiro</h3>
         <p>Controle seu dinheiro com metas claras e realistas.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fa-solid fa-handshake fa-2x"></i>
         <h3>Renegociação de Dívidas</h3>
         <p>Reduza juros e organize suas pendências.</p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fa-solid fa-user-tie fa-2x"></i>
         <h3>Consultoria Personalizada</h3>
         <p>Soluções adaptadas ao seu perfil e objetivo.</p>
       </div>
@@ -50,7 +62,7 @@
   </section>
 
   <!-- Seção Sobre -->
-  <section id="about">
+  <section id="about" data-aos="fade-right">
     <h2>Sobre Nós</h2>
     <p>
       Somos uma equipe especializada em assistência financeira, 
@@ -60,23 +72,4 @@
   </section>
 
   <!-- Seção Contato -->
-  <section id="contact">
-    <h2>Entre em Contato</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Seu Nome" required>
-      <input type="email" placeholder="Seu Email" required>
-      <textarea placeholder="Sua Mensagem" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-    <p class="msg-sucesso" id="msg-sucesso"></p>
-    <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">💬 Fale no WhatsApp</a>
-  </section>
-
-  <!-- Rodapé -->
-  <footer>
-    <p>© 2025 FinanAssist | Todos os direitos reservados</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <section id="contact" data
