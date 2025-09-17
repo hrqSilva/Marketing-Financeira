@@ -3,73 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assistência Financeira</title>
+  <title>FinanAssist - Assistência Financeira</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome (ícones) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- AOS (animações ao rolar) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Menu -->
-  <header id="header">
-    <nav class="navbar">
-      <h1 class="logo">FinanAssist</h1>
-      <ul class="nav-links">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#services">Serviços</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
-      <button class="menu-toggle">☰</button>
+  <!-- Cabeçalho -->
+  <header>
+    <h1>FinanAssist</h1>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#services">Serviços</a>
+      <a href="#about">Sobre</a>
+      <a href="#contact">Contato</a>
     </nav>
   </header>
 
-  <!-- Seção Home -->
-  <section id="home" class="hero">
-    <div class="hero-content" data-aos="fade-up">
-      <h2>Sua tranquilidade financeira começa aqui</h2>
-      <p>Consultoria simples e prática para organizar suas finanças.</p>
-      <a href="#contact" class="btn"><i class="fa-solid fa-comments"></i> Fale Conosco</a>
-    </div>
+  <!-- Home -->
+  <section id="home">
+    <h2>Bem-vindo à FinanAssist</h2>
+    <p>Sua parceira em organização financeira, renegociação de dívidas e consultoria personalizada.</p>
+    <a href="#services" class="btn">Conheça nossos serviços</a>
   </section>
 
-  <!-- Seção Serviços -->
+  <!-- Serviços -->
   <section id="services">
-    <h2 data-aos="fade-up">Nossos Serviços</h2>
-    <div class="cards">
-      <div class="card" data-aos="zoom-in">
-        <i class="fa-solid fa-chart-line fa-2x"></i>
-        <h3>Planejamento Financeiro</h3>
-        <p>Controle seu dinheiro com metas claras e realistas.</p>
+    <h2>Nossos Serviços</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>📊 Planejamento Financeiro</h3>
+        <p>Organize seus gastos e investimentos para conquistar um futuro tranquilo.</p>
       </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fa-solid fa-handshake fa-2x"></i>
-        <h3>Renegociação de Dívidas</h3>
-        <p>Reduza juros e organize suas pendências.</p>
+      <div class="service-card">
+        <h3>💳 Renegociação de Dívidas</h3>
+        <p>Ajudamos você a negociar suas dívidas e retomar o controle da sua vida financeira.</p>
       </div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="400">
-        <i class="fa-solid fa-user-tie fa-2x"></i>
-        <h3>Consultoria Personalizada</h3>
-        <p>Soluções adaptadas ao seu perfil e objetivo.</p>
+      <div class="service-card">
+        <h3>🤝 Consultoria Pessoal</h3>
+        <p>Atendimento individual para alcançar seus objetivos financeiros de forma segura.</p>
       </div>
     </div>
   </section>
 
-  <!-- Seção Sobre -->
-  <section id="about" data-aos="fade-right">
+  <!-- Sobre -->
+  <section id="about">
     <h2>Sobre Nós</h2>
     <p>
-      Somos uma equipe especializada em assistência financeira, 
-      ajudando pessoas e empresas a conquistarem equilíbrio econômico 
-      com soluções práticas e acessíveis.
+      A <strong>FinanAssist</strong> nasceu com o propósito de ajudar pessoas a conquistar estabilidade financeira.
+      Nossa equipe conta com especialistas prontos para oferecer soluções personalizadas, sempre com ética e transparência.
     </p>
   </section>
 
-  <!-- Seção Contato -->
-  <section id="contact" data
+  <!-- Contato -->
+  <section id="contact">
+    <h2>Fale Conosco</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Seu nome" required>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
+      <textarea id="message" placeholder="Escreva sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 FinanAssist - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
